@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B3611B889F1D84C8E4884864 /* Pods_TextFieldMaxLengths.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0440A4202958998F2C956275 /* Pods_TextFieldMaxLengths.framework */; };
 		E56FD8C921ECB87300DCAC7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56FD8C821ECB87300DCAC7F /* AppDelegate.swift */; };
 		E56FD8CB21ECB87300DCAC7F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56FD8CA21ECB87300DCAC7F /* ViewController.swift */; };
 		E56FD8CE21ECB87300DCAC7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E56FD8CC21ECB87300DCAC7F /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0440A4202958998F2C956275 /* Pods_TextFieldMaxLengths.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextFieldMaxLengths.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		65E3C08CDA08F96A45E77A99 /* Pods-TextFieldMaxLengths.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextFieldMaxLengths.release.xcconfig"; path = "Target Support Files/Pods-TextFieldMaxLengths/Pods-TextFieldMaxLengths.release.xcconfig"; sourceTree = "<group>"; };
+		85A762ECFAC5118E26536ACC /* Pods-TextFieldMaxLengths.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextFieldMaxLengths.debug.xcconfig"; path = "Target Support Files/Pods-TextFieldMaxLengths/Pods-TextFieldMaxLengths.debug.xcconfig"; sourceTree = "<group>"; };
 		E56FD8C521ECB87300DCAC7F /* TextFieldMaxLengths.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextFieldMaxLengths.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E56FD8C821ECB87300DCAC7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E56FD8CA21ECB87300DCAC7F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3611B889F1D84C8E4884864 /* Pods_TextFieldMaxLengths.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2BD041B64E93C5E2FBA2283F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				85A762ECFAC5118E26536ACC /* Pods-TextFieldMaxLengths.debug.xcconfig */,
+				65E3C08CDA08F96A45E77A99 /* Pods-TextFieldMaxLengths.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		3DB5DF47CDD29C5AC9A3E1E5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0440A4202958998F2C956275 /* Pods_TextFieldMaxLengths.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E56FD8BC21ECB87300DCAC7F = {
 			isa = PBXGroup;
 			children = (
 				E56FD8C721ECB87300DCAC7F /* TextFieldMaxLengths */,
 				E56FD8C621ECB87300DCAC7F /* Products */,
+				2BD041B64E93C5E2FBA2283F /* Pods */,
+				3DB5DF47CDD29C5AC9A3E1E5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +96,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E56FD8D721ECB87500DCAC7F /* Build configuration list for PBXNativeTarget "TextFieldMaxLengths" */;
 			buildPhases = (
+				0850ECB3ACE429B3A4A02C70 /* [CP] Check Pods Manifest.lock */,
 				E56FD8C121ECB87300DCAC7F /* Sources */,
 				E56FD8C221ECB87300DCAC7F /* Frameworks */,
 				E56FD8C321ECB87300DCAC7F /* Resources */,
+				845F6931403593CE69534AA6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0850ECB3ACE429B3A4A02C70 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TextFieldMaxLengths-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		845F6931403593CE69534AA6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TextFieldMaxLengths/Pods-TextFieldMaxLengths-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TextFieldMaxLengths/Pods-TextFieldMaxLengths-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E56FD8C121ECB87300DCAC7F /* Sources */ = {
@@ -280,11 +354,13 @@
 		};
 		E56FD8D821ECB87500DCAC7F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85A762ECFAC5118E26536ACC /* Pods-TextFieldMaxLengths.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q43MV2Y52R;
 				INFOPLIST_FILE = TextFieldMaxLengths/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,11 +374,13 @@
 		};
 		E56FD8D921ECB87500DCAC7F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65E3C08CDA08F96A45E77A99 /* Pods-TextFieldMaxLengths.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q43MV2Y52R;
 				INFOPLIST_FILE = TextFieldMaxLengths/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
